@@ -1,0 +1,15 @@
+{
+  "name": "livereload-base",
+  "version": "0.0.0",
+  "author": "Dominic Barnes <dominic@dbarnes.info>",
+  "description": "A base livereload server that a watcher can use to communicate changes to a client.",
+  "keywords": [
+    "livereload",
+    "server"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "livereload-js": "^2.2.2",
+    "ws": "^1.1.1"
+  }
+}
