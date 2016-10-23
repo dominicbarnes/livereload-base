@@ -1,0 +1,21 @@
+sudo: false
+language: node_js
+node_js:
+- stable
+- 4
+install:
+- npm prune
+- npm update
+after_success:
+- npm run coveralls
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: npm
+  email: dominic@dbarnes.info
+  api_key:
+    secure: T9R2ClZ/ZTknRsPkivTTBKaOCQWtgUQTNXyDPM+9S+RKOUBRZWTq7W7ygbh4XVe084h+W1BqnWPaCAT06HM0uC7IclZrhrmEF/g0OhfG4eFWaDm75O8ViXfo7rJZnDGbcN7pEizh37zv4HUQHM4YNxG0gNKtRNsdnkepdHnaOM8IdjeNc6lT5QrK5FV9w1wYKyvEnq8yo9h75lDgBIZVMLuk0S7OJdEEhrt9nkFH2wpiiPO11YBSQHaE/9dn4qdVFP7jlJFmvwuK65Fb9UrMP6rcpRUc5vKXtXM+a/Jl98+sGqJyeScZcPD25+NJVnQSc+TPrdgDVWbCHPvVjiP8vrSzpjTE53oInjR0SB6b5z9FsZyPcDxoRq4VUoNHal22b1UqIfvUTDWd1IEtkRqcXIJKVxH42xoM6p+c2z4hzVmn/lIRGyN0ahdTP4kzoqSk+gf5GzkU20pIgitGwHwJieIdSmwCasq8f2jcnx9Gmtbdvk5b4ARRbV/rSnGl4FKOgxVq0AtavAVI3YCVniJO8Yi7Fcx4wU8UFOf+VG/uzzGZwiF6XQ4CVg3LaRss6vN9/m+FH8qiKxyqXmrwjShzV5EG8XJc23ye6WB7G2OqOXnUCAtXFeB6QzjzOw3ut0PyX4mNulVdxKh8ZcbasJQoi5U0U4aUi4u0mLskvpQP4Tk=
+  on:
+    tags: true
+    repo: dominicbarnes/livereload-base
