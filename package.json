@@ -1,6 +1,6 @@
 {
   "name": "livereload-base",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Dominic Barnes <dominic@dbarnes.info>",
   "description": "A base livereload server that a watcher can use to communicate changes to a client.",
   "keywords": [
